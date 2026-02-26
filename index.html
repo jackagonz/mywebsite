@@ -1,19 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Jack A. Gonz</title>
 
-<html>
-    <h1>
-        Hey, I'm Jack Andrew Gonzalez. You can find me across socials using my handle, which is @jackagonz
-    </h1>
-    <body>
-        <h2>About me</h2>
-        <p>
-            I am a cybersecurity student who makes websites sometimes. (This one is very much a work in progress)
-        </p>
-        <h2>What I'm working on</h2>
-        <p>
-            I'm focused on improving in my knowledge of cybersecurity so this website isn't likely to undergo any changes anytime soon.
-	<p>
- 	<h2>What do I do for fun?</h2>
-        <p>
-	    I like to spend time with friends, play sports, watch Youtube and movies, as well as shoot photos.
-        </p>
-    </body>
+  <!-- Google Fonts: Playfair Display for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics (placeholder ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="#home">Jack A. Gonz</a>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Ideas. Projects. Ship.</h1>
+          <p class="tagline">Personal website for prototypes, projects, and things I build.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">See projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/420x300?text=Project+Snapshot" alt="Project snapshot">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <div id="about-content">Loading…</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="projects-list">Loading…</div>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="container">
+        <h2>Resume</h2>
+        <p>Download: <a href="jackagonzresume.pdf" download>jackagonzresume.pdf</a></p>
+        <div id="resume-summary"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" id="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" id="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <p class="social">Connect: <a href="https://www.linkedin.com" id="linkedin" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jack A. Gonz</small>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
