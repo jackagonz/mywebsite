@@ -1,0 +1,5 @@
+1. Put your jackagonzresume.pdf in the repo root.
+2. Update index.html: replace Google Analytics ID (G-XXXXXXX) and mailto email.
+3. Commit and push to GitHub.
+4. In the repo settings, enable GitHub Pages from the main branch (root).
+5. Point your domain to GitHub Pages per GitHub instructions.
